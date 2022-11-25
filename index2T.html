@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Album example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link rel="stylesheet" href="integrador2.css">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /*.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+}*/
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar  m-0 p-0 " style="background-color: #343A40;">
+            <a href="#" class="navbar-brand d-flex align-items-center m-0 ">
+                <img src="imagenes\codoacodo.png" alt="xxxx" width="100" height="50">
+                <strong class="text-light">Conf Bs As</strong>
+            </a>
+            <div class="position-relative  mx-4">
+                <a href="#" class="text-light" style="text-decoration:none ;">La conferencia</a>
+                <a href="#" class="text-white-50" style="text-decoration:none ;">Los Oradores</a>
+                <a href="#" class="text-white-50" style="text-decoration:none ;">El Lugar y la fecha</a>
+                <a href="#" class="text-white-50" style="text-decoration:none ;">Conviertete en Orador</a>
+                <a href="#" class="text-success" style="text-decoration:none ;">Comprar ticket</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="d-flex justify-content-around mt-5 flex-md-wrap">
+                <div class="card text-center border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Estudiante</h5>
+
+                        <p class="card-text">Tiene un descuento.</p>
+                        <h4>50%</h4>
+                        <p>* presentar documentacion</p>
+                    </div>
+                </div>
+                <div class="card text-center border-success" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Trainee</h5>
+                        <p class="card-text">Tiene un descuento.</p>
+                        <h4>50%</h4>
+                        <p>* presentar documentacion</p>
+                    </div>
+                </div>
+                <div class="card text-center border-warning" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Junior</h5>
+
+                        <p class="card-text">Tiene un descuento.</p>
+                        <h4>80%</h4>
+                        <p>* presentar documentacion</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class=" d-flex justify-content-center my-3">
+        <div class="text-center">
+            <h6>Venta</h6>
+            <h2>VALOR DE TICKET $200</h2>
+
+        </div>
+    </div>
+    <div class="container text-center">
+        <form action="#" method="post" id="form" >
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <input class="form-control form-control-sm d-inline" type="text" id="nombre" placeholder="Nombre"
+                        aria-label="default input example" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <input class="form-control form-control-sm d-inline" id="apellido" type="text"
+                        placeholder="Apellido" aria-label="default input example" required>
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 mb-3">
+                    <input class="form-control form-control-sm d-inline mt-2" type="email" id="email"
+                        placeholder="correo" aria-label="default input example">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-4 ">
+                    <input type="number" name="" id="cantidad" class="form-control" placeholder="cantidad"
+                        onkeyup="calTotal()">
+                </div>
+                <div class="col-md-4 ">
+                    <select name="" id="categoria" class="form-select" onchange="calTotal()">
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-8 ">
+                    <div class="bg-info p-2 text-md-start ml-2  " id="pagar">
+                        Total a pagar: $
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center">
+                <div class=" col-md-8 ">
+                    <button class="btn btn-outline-success col-5 " type="button"  id="borra"
+                    onclick="borrar()">Borrar</button>
+                    <button class="btn btn-outline-success col-5 " type="button" onclick="ticket()">Resumen</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer class="text-muted py-5 m-4 " style="background-color:#1E4F6D ;">
+        <div class=" d-flex justify-content-between container ">
+            <a href="#" class="text-light" style="text-decoration:none ;">Preguntas <br>Frecuentes</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Contactanos</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Prensa</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Conferencia</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Terminos <br>y condiciones</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Privacidad</a>
+            <a href="#" class="text-light" style="text-decoration:none ;">Estudiantes</a>
+        </div>
+    </footer>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="ticket.js"></script>
+
+
+</body>
+
+</html>
